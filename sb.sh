@@ -1073,7 +1073,7 @@ fi
 resvless(){
 echo
 white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-vl_link="vless://$uuid@$server_ip:$vl_port?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$vl_name&fp=chrome&pbk=$public_key&sid=$short_id&type=tcp&headerType=none#vl-reality-$hostname"
+vl_link="vless://$uuid@$server_ip:$vl_port?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$vl_name&fp=chrome&pbk=$public_key&sid=$short_id&type=tcp&headerType=none#自建|CC|新加坡|VL|Reality"
 echo "$vl_link" > /etc/s-box/vl_reality.txt
 red "🚀【 vless-reality-vision 】节点信息如下：" && sleep 2
 echo
@@ -1095,10 +1095,10 @@ white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 red "🚀【 vmess-ws(tls)+Argo 】临时节点信息如下(可选择3-8-3，自定义CDN优选地址)：" && sleep 2
 echo
 echo "分享链接【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argo'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'vm-argo-$hostname'","tls":"tls","sni":"'$argo'","type":"none","v":"2"}' | base64 -w 0)${plain}"
+echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argo'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'自建|CC|新加坡|VM|Argo|Temp'","tls":"tls","sni":"'$argo'","type":"none","v":"2"}' | base64 -w 0)${plain}"
 echo
 echo "二维码【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo 'vmess://'$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argo'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'vm-argo-$hostname'","tls":"tls","sni":"'$argo'","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws_argols.txt
+echo 'vmess://'$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argo'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'自建|CC|新加坡|VM|Argo|Temp'","tls":"tls","sni":"'$argo'","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws_argols.txt
 qrencode -o - -t ANSIUTF8 "$(cat /etc/s-box/vm_ws_argols.txt)"
 fi
 if [[ -n $(ps -e | grep -w $ym 2>/dev/null) ]]; then
@@ -1108,10 +1108,10 @@ white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 red "🚀【 vmess-ws(tls)+Argo 】固定节点信息如下 (可选择3-8-3，自定义CDN优选地址)：" && sleep 2
 echo
 echo "分享链接【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argogd'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'vm-argo-$hostname'","tls":"tls","sni":"'$argogd'","type":"none","v":"2"}' | base64 -w 0)${plain}"
+echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argogd'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'自建|CC|新加坡|VM|Argo|Perm'","tls":"tls","sni":"'$argogd'","type":"none","v":"2"}' | base64 -w 0)${plain}"
 echo
 echo "二维码【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo 'vmess://'$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argogd'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'vm-argo-$hostname'","tls":"tls","sni":"'$argogd'","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws_argogd.txt
+echo 'vmess://'$(echo '{"add":"'$vmadd_argo'","aid":"0","host":"'$argogd'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"8443","ps":"'自建|CC|新加坡|VM|Argo|Perm'","tls":"tls","sni":"'$argogd'","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws_argogd.txt
 qrencode -o - -t ANSIUTF8 "$(cat /etc/s-box/vm_ws_argogd.txt)"
 fi
 echo
@@ -1119,10 +1119,10 @@ white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 red "🚀【 vmess-ws 】节点信息如下 (建议选择3-8-1，设置为CDN优选节点)：" && sleep 2
 echo
 echo "分享链接【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'vm-ws-$hostname'","tls":"","type":"none","v":"2"}' | base64 -w 0)${plain}"
+echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'自建|CC|新加坡|VM|WS'","tls":"","type":"none","v":"2"}' | base64 -w 0)${plain}"
 echo
 echo "二维码【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo 'vmess://'$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'vm-ws-$hostname'","tls":"","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws.txt
+echo 'vmess://'$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'自建|CC|新加坡|VM|WS'","tls":"","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws.txt
 qrencode -o - -t ANSIUTF8 "$(cat /etc/s-box/vm_ws.txt)"
 else
 echo
@@ -1130,10 +1130,10 @@ white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 red "🚀【 vmess-ws-tls 】节点信息如下 (建议选择3-8-1，设置为CDN优选节点)：" && sleep 2
 echo
 echo "分享链接【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'vm-ws-tls-$hostname'","tls":"tls","sni":"'$vm_name'","type":"none","v":"2"}' | base64 -w 0)${plain}"
+echo -e "${yellow}vmess://$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'自建|CC|新加坡|VM|WS|TSL'","tls":"tls","sni":"'$vm_name'","type":"none","v":"2"}' | base64 -w 0)${plain}"
 echo
 echo "二维码【v2rayn、v2rayng、nekobox、小火箭shadowrocket】"
-echo 'vmess://'$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'vm-ws-tls-$hostname'","tls":"tls","sni":"'$vm_name'","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws_tls.txt
+echo 'vmess://'$(echo '{"add":"'$vmadd_are_local'","aid":"0","host":"'$vm_name'","id":"'$uuid'","net":"ws","path":"'$ws_path'","port":"'$vm_port'","ps":"'自建|CC|新加坡|VM|WS|TLS'","tls":"tls","sni":"'$vm_name'","type":"none","v":"2"}' | base64 -w 0) > /etc/s-box/vm_ws_tls.txt
 qrencode -o - -t ANSIUTF8 "$(cat /etc/s-box/vm_ws_tls.txt)"
 fi
 white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
@@ -1143,8 +1143,8 @@ echo
 reshy2(){
 echo
 white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-#hy2_link="hysteria2://$uuid@$sb_hy2_ip:$hy2_port?security=tls&alpn=h3&insecure=$ins_hy2&mport=$hyps&sni=$hy2_name#hy2-$hostname"
-hy2_link="hysteria2://$uuid@$sb_hy2_ip:$hy2_port?security=tls&alpn=h3&insecure=$ins_hy2&sni=$hy2_name#hy2-$hostname"
+#hy2_link="hysteria2://$uuid@$sb_hy2_ip:$hy2_port?security=tls&alpn=h3&insecure=$ins_hy2&mport=$hyps&sni=$hy2_name#自建|CC|新加坡|HY2"
+hy2_link="hysteria2://$uuid@$sb_hy2_ip:$hy2_port?security=tls&alpn=h3&insecure=$ins_hy2&sni=$hy2_name#自建|CC|新加坡|HY2"
 echo "$hy2_link" > /etc/s-box/hy2.txt
 red "🚀【 Hysteria-2 】节点信息如下：" && sleep 2
 echo
@@ -1160,7 +1160,7 @@ echo
 restu5(){
 echo
 white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-tuic5_link="tuic://$uuid:$uuid@$sb_tu5_ip:$tu5_port?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=$tu5_name&allow_insecure=$ins&allowInsecure=$ins#tu5-$hostname"
+tuic5_link="tuic://$uuid:$uuid@$sb_tu5_ip:$tu5_port?congestion_control=bbr&udp_relay_mode=native&alpn=h3&sni=$tu5_name&allow_insecure=$ins&allowInsecure=$ins#自建|CC|新加坡|TU5"
 echo "$tuic5_link" > /etc/s-box/tuic5.txt
 red "🚀【 Tuic-v5 】节点信息如下：" && sleep 2
 echo
@@ -1277,19 +1277,19 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "default": "auto",
       "outbounds": [
         "auto",
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname",
-"vmess-tls-argo固定-$hostname",
-"vmess-argo固定-$hostname",
-"vmess-tls-argo临时-$hostname",
-"vmess-argo临时-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5",
+"自建|CC|新加坡|VM|TLS|Argo|Perm",
+"自建|CC|新加坡|VM|Argo|Perm",
+"自建|CC|新加坡|VM|TLS|Argo|Temp",
+"自建|CC|新加坡|VM|Argo|Temp"
       ]
     },
     {
       "type": "vless",
-      "tag": "vless-$hostname",
+      "tag": "自建|CC|新加坡|VL|Reality",
       "server": "$server_ipcl",
       "server_port": $vl_port,
       "uuid": "$uuid",
@@ -1311,7 +1311,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_local",
             "server_port": $vm_port,
-            "tag": "vmess-$hostname",
+            "tag": "自建|CC|新加坡|VM|WS",
             "tls": {
                 "enabled": $tls,
                 "server_name": "$vm_name",
@@ -1338,7 +1338,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 
     {
         "type": "hysteria2",
-        "tag": "hy2-$hostname",
+        "tag": "自建|CC|新加坡|HY2",
         "server": "$cl_hy2_ip",
         "server_port": $hy2_port,
         "password": "$uuid",
@@ -1353,7 +1353,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
     },
         {
             "type":"tuic",
-            "tag": "tuic5-$hostname",
+            "tag": "自建|CC|新加坡|TU5",
             "server": "$cl_tu5_ip",
             "server_port": $tu5_port,
             "uuid": "$uuid",
@@ -1375,7 +1375,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8443,
-            "tag": "vmess-tls-argo固定-$hostname",
+            "tag": "自建|CC|新加坡|VM|TLS|Argo|Perm",
             "tls": {
                 "enabled": true,
                 "server_name": "$argogd",
@@ -1402,7 +1402,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8880,
-            "tag": "vmess-argo固定-$hostname",
+            "tag": "自建|CC|新加坡|VM|Argo|Perm",
             "tls": {
                 "enabled": false,
                 "server_name": "$argogd",
@@ -1429,7 +1429,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8443,
-            "tag": "vmess-tls-argo临时-$hostname",
+            "tag": "自建|CC|新加坡|VM|TLS|Argo|Temp",
             "tls": {
                 "enabled": true,
                 "server_name": "$argo",
@@ -1456,7 +1456,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8880,
-            "tag": "vmess-argo临时-$hostname",
+            "tag": "自建|CC|新加坡|VM|Argo|Temp",
             "tls": {
                 "enabled": false,
                 "server_name": "$argo",
@@ -1488,14 +1488,14 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname",
-"vmess-tls-argo固定-$hostname",
-"vmess-argo固定-$hostname",
-"vmess-tls-argo临时-$hostname",
-"vmess-argo临时-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5",
+"自建|CC|新加坡|VM|TLS|Argo|Perm",
+"自建|CC|新加坡|VM|Argo|Perm",
+"自建|CC|新加坡|VM|TLS|Argo|Temp",
+"自建|CC|新加坡|VM|Argo|Temp"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -1611,7 +1611,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-- name: vless-reality-vision-$hostname               
+- name: 自建|CC|新加坡|VL|Reality           
   type: vless
   server: $server_ipcl                           
   port: $vl_port                                
@@ -1626,7 +1626,7 @@ proxies:
     short-id: $short_id                      
   client-fingerprint: chrome                  
 
-- name: vmess-ws-$hostname                         
+- name: 自建|CC|新加坡|VM|WS                      
   type: vmess
   server: $vmadd_local                        
   port: $vm_port                                     
@@ -1642,7 +1642,7 @@ proxies:
     headers:
       Host: $vm_name                     
 
-- name: hysteria2-$hostname                            
+- name: 自建|CC|新加坡|HY2                        
   type: hysteria2                                      
   server: $cl_hy2_ip                               
   port: $hy2_port                                
@@ -1653,7 +1653,7 @@ proxies:
   skip-cert-verify: $hy2_ins
   fast-open: true
 
-- name: tuic5-$hostname                            
+- name: 自建|CC|新加坡|TU5                         
   server: $cl_tu5_ip                      
   port: $tu5_port                                    
   type: tuic
@@ -1667,7 +1667,7 @@ proxies:
   sni: $tu5_name                                
   skip-cert-verify: $tu5_ins
 
-- name: vmess-tls-argo固定-$hostname                         
+- name: 自建|CC|新加坡|VM|TLS|Argo|Perm                  
   type: vmess
   server: $vmadd_argo                        
   port: 8443                                     
@@ -1684,7 +1684,7 @@ proxies:
       Host: $argogd
 
 
-- name: vmess-argo固定-$hostname                         
+- name: 自建|CC|新加坡|VM|Argo|Perm                     
   type: vmess
   server: $vmadd_argo                        
   port: 8880                                     
@@ -1700,7 +1700,7 @@ proxies:
     headers:
       Host: $argogd
 
-- name: vmess-tls-argo临时-$hostname                         
+- name: 自建|CC|新加坡|VM|TLS|Argo|Temp                         
   type: vmess
   server: $vmadd_argo                        
   port: 8443                                     
@@ -1716,7 +1716,7 @@ proxies:
     headers:
       Host: $argo
 
-- name: vmess-argo临时-$hostname                         
+- name: 自建|CC|新加坡|VM|Argo|Temp                        
   type: vmess
   server: $vmadd_argo                        
   port: 8880                                     
@@ -1739,14 +1739,14 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo固定-$hostname
-    - vmess-argo固定-$hostname
-    - vmess-tls-argo临时-$hostname
-    - vmess-argo临时-$hostname
+    - 自建|CC|新加坡|VL|Reality                              
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Perm
+    - 自建|CC|新加坡|VM|Argo|Perm
+    - 自建|CC|新加坡|VM|TLS|Argo|Temp
+    - 自建|CC|新加坡|VM|Argo|Temp
 
 - name: 自动选择
   type: url-test
@@ -1754,14 +1754,14 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo固定-$hostname
-    - vmess-argo固定-$hostname
-    - vmess-tls-argo临时-$hostname
-    - vmess-argo临时-$hostname
+    - 自建|CC|新加坡|VL|Reality                              
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Perm
+    - 自建|CC|新加坡|VM|Argo|Perm
+    - 自建|CC|新加坡|VM|TLS|Argo|Temp
+    - 自建|CC|新加坡|VM|Argo|Temp
     
 - name: 🌍选择代理节点
   type: select
@@ -1769,14 +1769,14 @@ proxy-groups:
     - 负载均衡                                         
     - 自动选择
     - DIRECT
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo固定-$hostname
-    - vmess-argo固定-$hostname
-    - vmess-tls-argo临时-$hostname
-    - vmess-argo临时-$hostname
+    - 自建|CC|新加坡|VL|Reality                              
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Perm
+    - 自建|CC|新加坡|VM|Argo|Perm
+    - 自建|CC|新加坡|VM|TLS|Argo|Temp
+    - 自建|CC|新加坡|VM|Argo|Temp
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
@@ -1885,17 +1885,17 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "default": "auto",
       "outbounds": [
         "auto",
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname",
-"vmess-tls-argo临时-$hostname",
-"vmess-argo临时-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5",
+"自建|CC|新加坡|VM|TLS|Argo|Temp",
+"自建|CC|新加坡|VM|Argo|Temp"
       ]
     },
     {
       "type": "vless",
-      "tag": "vless-$hostname",
+      "tag": "自建|CC|新加坡|VL|Reality",
       "server": "$server_ipcl",
       "server_port": $vl_port,
       "uuid": "$uuid",
@@ -1917,7 +1917,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_local",
             "server_port": $vm_port,
-            "tag": "vmess-$hostname",
+            "tag": "自建|CC|新加坡|VM|WS",
             "tls": {
                 "enabled": $tls,
                 "server_name": "$vm_name",
@@ -1944,7 +1944,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 
     {
         "type": "hysteria2",
-        "tag": "hy2-$hostname",
+        "tag": "自建|CC|新加坡|HY2",
         "server": "$cl_hy2_ip",
         "server_port": $hy2_port,
         "password": "$uuid",
@@ -1959,7 +1959,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
     },
         {
             "type":"tuic",
-            "tag": "tuic5-$hostname",
+            "tag": "自建|CC|新加坡|TU5",
             "server": "$cl_tu5_ip",
             "server_port": $tu5_port,
             "uuid": "$uuid",
@@ -1981,7 +1981,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8443,
-            "tag": "vmess-tls-argo临时-$hostname",
+            "tag": "自建|CC|新加坡|VM|TLS|Argo|Temp",
             "tls": {
                 "enabled": true,
                 "server_name": "$argo",
@@ -2008,7 +2008,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8880,
-            "tag": "vmess-argo临时-$hostname",
+            "tag": "自建|CC|新加坡|VM|Argo|Temp",
             "tls": {
                 "enabled": false,
                 "server_name": "$argo",
@@ -2040,12 +2040,12 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname",
-"vmess-tls-argo临时-$hostname",
-"vmess-argo临时-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5",
+"自建|CC|新加坡|VM|TLS|Argo|Temp",
+"自建|CC|新加坡|VM|Argo|Temp"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -2161,7 +2161,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-- name: vless-reality-vision-$hostname               
+- name: 自建|CC|新加坡|VL|Reality             
   type: vless
   server: $server_ipcl                           
   port: $vl_port                                
@@ -2176,7 +2176,7 @@ proxies:
     short-id: $short_id                      
   client-fingerprint: chrome                  
 
-- name: vmess-ws-$hostname                         
+- name: 自建|CC|新加坡|VM|WS                         
   type: vmess
   server: $vmadd_local                        
   port: $vm_port                                     
@@ -2192,7 +2192,7 @@ proxies:
     headers:
       Host: $vm_name                     
 
-- name: hysteria2-$hostname                            
+- name: 自建|CC|新加坡|HY2                           
   type: hysteria2                                      
   server: $cl_hy2_ip                               
   port: $hy2_port                                
@@ -2203,7 +2203,7 @@ proxies:
   skip-cert-verify: $hy2_ins
   fast-open: true
 
-- name: tuic5-$hostname                            
+- name: 自建|CC|新加坡|TU5                         
   server: $cl_tu5_ip                      
   port: $tu5_port                                    
   type: tuic
@@ -2225,7 +2225,7 @@ proxies:
 
 
 
-- name: vmess-tls-argo临时-$hostname                         
+- name: 自建|CC|新加坡|VM|TLS|Argo|Temp                       
   type: vmess
   server: $vmadd_argo                        
   port: 8443                                     
@@ -2241,7 +2241,7 @@ proxies:
     headers:
       Host: $argo
 
-- name: vmess-argo临时-$hostname                         
+- name: 自建|CC|新加坡|VM|Argo|Temp                      
   type: vmess
   server: $vmadd_argo                        
   port: 8880                                     
@@ -2264,12 +2264,12 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo临时-$hostname
-    - vmess-argo临时-$hostname
+    - 自建|CC|新加坡|VL|Reality                            
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Temp
+    - 自建|CC|新加坡|VM|Argo|Temp
 
 - name: 自动选择
   type: url-test
@@ -2277,12 +2277,12 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo临时-$hostname
-    - vmess-argo临时-$hostname
+    - 自建|CC|新加坡|VL|Reality                            
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Temp
+    - 自建|CC|新加坡|VM|Argo|Temp
     
 - name: 🌍选择代理节点
   type: select
@@ -2290,12 +2290,12 @@ proxy-groups:
     - 负载均衡                                         
     - 自动选择
     - DIRECT
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo临时-$hostname
-    - vmess-argo临时-$hostname
+    - 自建|CC|新加坡|VL|Reality                            
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Temp
+    - 自建|CC|新加坡|VM|Argo|Temp
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
@@ -2403,17 +2403,17 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "default": "auto",
       "outbounds": [
         "auto",
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname",
-"vmess-tls-argo固定-$hostname",
-"vmess-argo固定-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5",
+"自建|CC|新加坡|VM|TLS|Argo|Perm",
+"自建|CC|新加坡|VM|Argo|Perm"
       ]
     },
     {
       "type": "vless",
-      "tag": "vless-$hostname",
+      "tag": "自建|CC|新加坡|VL|Reality",
       "server": "$server_ipcl",
       "server_port": $vl_port,
       "uuid": "$uuid",
@@ -2435,7 +2435,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_local",
             "server_port": $vm_port,
-            "tag": "vmess-$hostname",
+            "tag": "自建|CC|新加坡|VM|WS",
             "tls": {
                 "enabled": $tls,
                 "server_name": "$vm_name",
@@ -2462,7 +2462,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 
     {
         "type": "hysteria2",
-        "tag": "hy2-$hostname",
+        "tag": "自建|CC|新加坡|HY2",
         "server": "$cl_hy2_ip",
         "server_port": $hy2_port,
         "password": "$uuid",
@@ -2477,7 +2477,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
     },
         {
             "type":"tuic",
-            "tag": "tuic5-$hostname",
+            "tag": "自建|CC|新加坡|TU5",
             "server": "$cl_tu5_ip",
             "server_port": $tu5_port,
             "uuid": "$uuid",
@@ -2499,7 +2499,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8443,
-            "tag": "vmess-tls-argo固定-$hostname",
+            "tag": "自建|CC|新加坡|VM|TLS|Argo|Perm",
             "tls": {
                 "enabled": true,
                 "server_name": "$argogd",
@@ -2526,7 +2526,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_argo",
             "server_port": 8880,
-            "tag": "vmess-argo固定-$hostname",
+            "tag": "自建|CC|新加坡|VM|Argo|Perm",
             "tls": {
                 "enabled": false,
                 "server_name": "$argogd",
@@ -2558,12 +2558,12 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname",
-"vmess-tls-argo固定-$hostname",
-"vmess-argo固定-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5",
+"自建|CC|新加坡|VM|TLS|Argo|Perm",
+"自建|CC|新加坡|VM|Argo|Perm"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -2679,7 +2679,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-- name: vless-reality-vision-$hostname               
+- name: 自建|CC|新加坡|VL|Reality               
   type: vless
   server: $server_ipcl                           
   port: $vl_port                                
@@ -2694,7 +2694,7 @@ proxies:
     short-id: $short_id                      
   client-fingerprint: chrome                  
 
-- name: vmess-ws-$hostname                         
+- name: 自建|CC|新加坡|VM|WS                        
   type: vmess
   server: $vmadd_local                        
   port: $vm_port                                     
@@ -2710,7 +2710,7 @@ proxies:
     headers:
       Host: $vm_name                     
 
-- name: hysteria2-$hostname                            
+- name: 自建|CC|新加坡|HY2                          
   type: hysteria2                                      
   server: $cl_hy2_ip                               
   port: $hy2_port                                
@@ -2721,7 +2721,7 @@ proxies:
   skip-cert-verify: $hy2_ins
   fast-open: true
 
-- name: tuic5-$hostname                            
+- name: 自建|CC|新加坡|TU5                            
   server: $cl_tu5_ip                      
   port: $tu5_port                                    
   type: tuic
@@ -2741,7 +2741,7 @@ proxies:
 
 
 
-- name: vmess-tls-argo固定-$hostname                         
+- name: 自建|CC|新加坡|VM|TLS|Argo|Perm                         
   type: vmess
   server: $vmadd_argo                        
   port: 8443                                     
@@ -2757,7 +2757,7 @@ proxies:
     headers:
       Host: $argogd
 
-- name: vmess-argo固定-$hostname                         
+- name: 自建|CC|新加坡|VM|Argo|Perm                         
   type: vmess
   server: $vmadd_argo                        
   port: 8880                                     
@@ -2780,12 +2780,12 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo固定-$hostname
-    - vmess-argo固定-$hostname
+    - 自建|CC|新加坡|VL|Reality                              
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Perm
+    - 自建|CC|新加坡|VM|Argo|Perm
 
 - name: 自动选择
   type: url-test
@@ -2793,12 +2793,12 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo固定-$hostname
-    - vmess-argo固定-$hostname
+    - 自建|CC|新加坡|VL|Reality                              
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Perm
+    - 自建|CC|新加坡|VM|Argo|Perm
     
 - name: 🌍选择代理节点
   type: select
@@ -2806,12 +2806,12 @@ proxy-groups:
     - 负载均衡                                         
     - 自动选择
     - DIRECT
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
-    - vmess-tls-argo固定-$hostname
-    - vmess-argo固定-$hostname
+    - 自建|CC|新加坡|VL|Reality                              
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
+    - 自建|CC|新加坡|VM|TLS|Argo|Perm
+    - 自建|CC|新加坡|VM|Argo|Perm
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
@@ -2919,15 +2919,15 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "default": "auto",
       "outbounds": [
         "auto",
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5"
       ]
     },
     {
       "type": "vless",
-      "tag": "vless-$hostname",
+      "tag": "自建|CC|新加坡|VL|Reality",
       "server": "$server_ipcl",
       "server_port": $vl_port,
       "uuid": "$uuid",
@@ -2949,7 +2949,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 {
             "server": "$vmadd_local",
             "server_port": $vm_port,
-            "tag": "vmess-$hostname",
+            "tag": "自建|CC|新加坡|VM|WS",
             "tls": {
                 "enabled": $tls,
                 "server_name": "$vm_name",
@@ -2976,7 +2976,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
 
     {
         "type": "hysteria2",
-        "tag": "hy2-$hostname",
+        "tag": "自建|CC|新加坡|HY2",
         "server": "$cl_hy2_ip",
         "server_port": $hy2_port,
         "password": "$uuid",
@@ -2991,7 +2991,7 @@ cat > /etc/s-box/sing_box_client.json <<EOF
     },
         {
             "type":"tuic",
-            "tag": "tuic5-$hostname",
+            "tag": "自建|CC|新加坡|TU5",
             "server": "$cl_tu5_ip",
             "server_port": $tu5_port,
             "uuid": "$uuid",
@@ -3018,10 +3018,10 @@ cat > /etc/s-box/sing_box_client.json <<EOF
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "vless-$hostname",
-        "vmess-$hostname",
-        "hy2-$hostname",
-        "tuic5-$hostname"
+        "自建|CC|新加坡|VL|Reality",
+        "自建|CC|新加坡|VM|WS",
+        "自建|CC|新加坡|HY2",
+        "自建|CC|新加坡|TU5"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "1m",
@@ -3137,7 +3137,7 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-- name: vless-reality-vision-$hostname               
+- name: 自建|CC|新加坡|VL|Reality             
   type: vless
   server: $server_ipcl                           
   port: $vl_port                                
@@ -3152,7 +3152,7 @@ proxies:
     short-id: $short_id                    
   client-fingerprint: chrome                  
 
-- name: vmess-ws-$hostname                         
+- name: 自建|CC|新加坡|VM|WS                       
   type: vmess
   server: $vmadd_local                        
   port: $vm_port                                     
@@ -3172,7 +3172,7 @@ proxies:
 
 
 
-- name: hysteria2-$hostname                            
+- name: 自建|CC|新加坡|HY2                           
   type: hysteria2                                      
   server: $cl_hy2_ip                               
   port: $hy2_port                                
@@ -3183,7 +3183,7 @@ proxies:
   skip-cert-verify: $hy2_ins
   fast-open: true
 
-- name: tuic5-$hostname                            
+- name: 自建|CC|新加坡|TU5                            
   server: $cl_tu5_ip                      
   port: $tu5_port                                    
   type: tuic
@@ -3204,10 +3204,10 @@ proxy-groups:
   interval: 300
   strategy: round-robin
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
+    - 自建|CC|新加坡|VL|Reality                            
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
 
 - name: 自动选择
   type: url-test
@@ -3215,10 +3215,10 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
+    - 自建|CC|新加坡|VL|Reality                            
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
     
 - name: 🌍选择代理节点
   type: select
@@ -3226,10 +3226,10 @@ proxy-groups:
     - 负载均衡                                         
     - 自动选择
     - DIRECT
-    - vless-reality-vision-$hostname                              
-    - vmess-ws-$hostname
-    - hysteria2-$hostname
-    - tuic5-$hostname
+    - 自建|CC|新加坡|VL|Reality                            
+    - 自建|CC|新加坡|VM|WS
+    - 自建|CC|新加坡|HY2
+    - 自建|CC|新加坡|TU5
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
@@ -3426,7 +3426,7 @@ inssbjsonser
 sbservice
 sbactive
 #curl -sL https://gitlab.com/rwkgyg/sing-box-yg/-/raw/main/version/version | awk -F "更新内容" '{print $1}' | head -n 1 > /etc/s-box/v
-curl -sL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/version | awk -F "更新内容" '{print $1}' | head -n 1 > /etc/s-box/v
+curl -sL https://raw.githubusercontent.com/VitoMao/sing-box/main/version | awk -F "更新内容" '{print $1}' | head -n 1 > /etc/s-box/v
 red "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 lnsb && blue "Sing-box-yg脚本安装成功，脚本快捷方式：sb" && cronsb
 echo
@@ -4624,7 +4624,7 @@ rm /tmp/crontab.tmp
 
 lnsb(){
 rm -rf /usr/bin/sb
-curl -L -o /usr/bin/sb -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh
+curl -L -o /usr/bin/sb -# --retry 2 --insecure https://raw.githubusercontent.com/VitoMao/sing-box/main/sb.sh
 chmod +x /usr/bin/sb
 }
 
@@ -4633,7 +4633,7 @@ if [[ ! -f '/usr/bin/sb' ]]; then
 red "未正常安装Sing-box-yg" && exit
 fi
 lnsb
-curl -sL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/version | awk -F "更新内容" '{print $1}' | head -n 1 > /etc/s-box/v
+curl -sL https://raw.githubusercontent.com/VitoMao/sing-box/main/version | awk -F "更新内容" '{print $1}' | head -n 1 > /etc/s-box/v
 green "Sing-box-yg安装脚本升级成功" && sleep 5 && sb
 }
 
@@ -4712,7 +4712,7 @@ iptables -t nat -F PREROUTING >/dev/null 2>&1
 netfilter-persistent save >/dev/null 2>&1
 service iptables save >/dev/null 2>&1
 green "Sing-box卸载完成！"
-blue "欢迎继续使用Sing-box-yg脚本：bash <(curl -Ls https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sb.sh)"
+blue "欢迎继续使用Sing-box-yg脚本：bash <(curl -Ls https://raw.githubusercontent.com/VitoMao/sing-box/main/sb.sh)"
 echo
 }
 
@@ -4951,7 +4951,7 @@ case $(uname -m) in
 aarch64) cpu=arm64;;
 x86_64) cpu=amd64;;
 esac
-curl -L -o /etc/s-box/sbwpph -# --retry 2 --insecure https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/sbwpph_$cpu
+curl -L -o /etc/s-box/sbwpph -# --retry 2 --insecure https://raw.githubusercontent.com/VitoMao/sing-box/main/sbwpph_$cpu
 chmod +x /etc/s-box/sbwpph
 fi
 if [[ -n $(ps -e | grep sbwpph) ]]; then
@@ -5129,14 +5129,14 @@ white "-------------------------------------------------------------------------
 green " 0. 退出脚本"
 red "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 insV=$(cat /etc/s-box/v 2>/dev/null)
-latestV=$(curl -sL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/version | awk -F "更新内容" '{print $1}' | head -n 1)
+latestV=$(curl -sL https://raw.githubusercontent.com/VitoMao/sing-box/main/version | awk -F "更新内容" '{print $1}' | head -n 1)
 if [ -f /etc/s-box/v ]; then
 if [ "$insV" = "$latestV" ]; then
 echo -e "当前 Sing-box-yg 脚本最新版：${bblue}${insV}${plain} (已安装)"
 else
 echo -e "当前 Sing-box-yg 脚本版本号：${bblue}${insV}${plain}"
 echo -e "检测到最新 Sing-box-yg 脚本版本号：${yellow}${latestV}${plain} (可选择7进行更新)"
-echo -e "${yellow}$(curl -sL https://raw.githubusercontent.com/yonggekkk/sing-box-yg/main/version)${plain}"
+echo -e "${yellow}$(curl -sL https://raw.githubusercontent.com/VitoMao/sing-box/main/version)${plain}"
 fi
 else
 echo -e "当前 Sing-box-yg 脚本版本号：${bblue}${latestV}${plain}"
